@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .form-container {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 40px 50px;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 400px;
+      transition: transform 0.3s ease;
+    }
+
+    .form-container:hover {
+      transform: translateY(-5px);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px 15px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      color: #fff;
+      font-size: 16px;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    .input-group input:focus {
+      border-color: #00d2ff;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 10px rgba(0, 210, 255, 0.3);
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, #3a7bd5, #3a6073);
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(58, 123, 213, 0.3);
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #438bf0, #406f85);
+      box-shadow: 0 8px 20px rgba(58, 123, 213, 0.5);
+      transform: translateY(-2px);
+    }
+  </style>
+  <body>
+    <div class="form-container">
+      <h2>Welcome</h2>
+      <form method="post" action="/" name="User">
+        
+        <div class="input-group">
+          <label for="Name">What is your Name?</label>
+          <input type="text" name="UserName" id="UserName" required />
+        </div>
+
+        <div class="input-group">
+          <label for="Age">What is your Age?</label>
+          <input type="number" name="Age" id="Age" required />
+        </div>
+
+        <div class="input-group">
+          <label for="Password">What is your Password?</label>
+          <input type="password" name="Password" id="Password" required />
+        </div>
+
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </body>
+</html>
